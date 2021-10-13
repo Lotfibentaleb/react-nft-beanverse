@@ -5,19 +5,20 @@ const theme = createTheme({
     palette: {
         type: 'dark',
         primary: {
-            main: '#95DFFFE5',
+            main: '#95DFFF',
             contrastText: '#fff'
         },
         secondary: {
-            main: '#D2DAE4',
+            main: '#B2C5F5',
             contrastText: '#fff'
         },
         background: {
-            default: '#161127'
+            default: '#ffffff'
         },
         text: {
-            primary: '#D2DAE4',
-            secondary: '#E84393'
+            primary: '#ffffff',
+            secondary: '#1F2B6C',
+            third: '#B2C5F5',
         }
     },
     shape: {

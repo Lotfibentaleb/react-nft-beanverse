@@ -1,40 +1,51 @@
 const typegraphy = {
-    fontFamily: `"Poppins", sans-serif`,
+    fontFamily: "Gotham Rounded",
     h1: {
-        fontFamily: `"Circular Std", sans-serif`,
-        fontSize: 64,
+        fontFamily: "Gotham Rounded",
+        fontSize: 45,
         fontWeight: 'bold'
     },
     h2: {
-        fontFamily: `"Circular Std", sans-serif`,
-        fontSize: 48,
+        fontFamily: "Gotham Rounded",
+        fontSize: 45,
         fontWeight: 'bold'
     },
     h3: {
-        fontSize: 32,
-        fontWeight: '500'
+        fontSize: 20,
+        fontWeight: 'bold'
     },
-    h4: {},
-    h5: {},
-    h6: {},
+    h4: {
+        fontSize: 21,
+        fontWeight: 'bold'
+    },
+    h5: {
+        fontSize: 13,
+        fontWeight: '350'
+    },
+    h6: {
+        fontSize: 12,
+        fontWeight: '350'
+    },
     caption: {
-        fontFamily: `"Circular Std", sans-serif`,
+        fontFamily: "Gotham Rounded",
         fontSize: 18,
         fontWeight: 'medium'
     },
     subtitle2: {
-        fontFamily: `"Circular Std", sans-serif`,
+        fontFamily: "Gotham Rounded",
         fontSize: 14,
         fontWeight: 'Bold'
     },
     button: {
-        fontFamily: `"Circular Std", sans-serif`,
+        fontFamily: "Gotham Rounded",
         fontSize: 18,
         fontWeight: 'bold',
         textTransform: 'none'
     },
-    body1: {
-        fontSize: 16
+    body2: {
+        fontSize: 20,
+        fontWeight: 300,
+        fontStyle: "normal",
     }
 }
 

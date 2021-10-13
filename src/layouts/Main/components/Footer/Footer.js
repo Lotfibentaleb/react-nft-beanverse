@@ -1,27 +1,27 @@
-import {Box, Container, IconButton, Link, Typography} from '@material-ui/core'
-import { SportsEsports, Twitter } from '@material-ui/icons'
+import {Box, Link, Typography} from '@material-ui/core'
 import useStyles from './Footer.styles'
 
 const Footer = () => {
     const classes = useStyles()
 
     return (
-        <Container maxWidth="lg">
-            <Box className={classes.root} textAlign="center">
-                <img src="/images/logo.png" alt="Beanverse" />
-                <Typography variant="subtitle2">
-                    Copyright © Beanverse 2021. All rights reserved
-                </Typography>
-                <Box marginTop={2}>
-                    <IconButton href="https://discord.gg/pfl">
-                        <SportsEsports />
-                    </IconButton>
-                    <IconButton href="https://twitter.com/pfl_game">
-                        <Twitter />
-                    </IconButton>
+        <Box className={classes.root}>
+            <Box className={classes.footer}>
+                <img src="/images/footer_logo.png" alt="Beanverse" />
+                <Box className={classes.socialLinkGroup}>
+                    <Link href="https://discord.gg/pfl" variant="caption" color="textPrimary" underline="always">
+                        <Box className={classes.socialLink}>
+                            <Typography >DISCORD</Typography>
+                        </Box>
+                    </Link>
+                    <Link href="https://twitter.com/pfl_game" variant="caption" color="textPrimary" underline="always">
+                        <Box className={classes.socialLink}>
+                            <Typography >TWITTER</Typography>
+                        </Box>
+                    </Link>
                 </Box>
             </Box>
-        </Container>
+        </Box>
     )
 }
 

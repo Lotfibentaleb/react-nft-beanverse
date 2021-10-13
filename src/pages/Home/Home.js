@@ -1,219 +1,174 @@
-// import { useState } from 'react'
-import {Box, Button, Container, Grid, Paper, Typography} from '@material-ui/core'
-import Feature from 'components/Feature'
-import Plush from 'components/Plush'
-import Roadmap from 'components/Roadmap'
-import TeamMember from 'components/TeamMember'
-import useStyles from './Home.styles'
+import {
+  Box,
+  Button,
+  Container,
+  Grid,
+  Typography
+} from "@material-ui/core";
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import TeamCard from "components/TeamCard";
+import Roadmap from "components/Roadmap";
+import Questions from "components/Questions";
+import useStyles from "./Home.styles";
+
+
+const CAROUSEL_RESPONSIVE = {
+	superLargeDesktop: {
+	  // the naming can be any, depends on you.
+	  breakpoint: { max: 4000, min: 3000 },
+	  items: 5
+	},
+	desktop: {
+	  breakpoint: { max: 3000, min: 1024 },
+	  items: 5
+	},
+	tablet: {
+	  breakpoint: { max: 1024, min: 464 },
+	  items: 3
+	},
+	mobile: {
+	  breakpoint: { max: 464, min: 0 },
+	  items: 1
+	}
+  };
+
+const CAROUSEL_ITEM_IMAGES = ['bean1.png', 'bean1.png', 'bean1.png', 'bean1.png', 'bean1.png']
+
+const TEAMCARD_IMAGES = [
+	{image: 'bean1.png', name: 'SCEPTIC', title: 'OWNER / DIRECTOR', iconImages: ["twitter.png", "tiktok.png", "instagram.png", "youtube.png", "twitch.png"]},
+	{image: 'bean2.png', name: 'DEVIN', title: 'OWNER / DESIGNER', iconImages: ["twitter.png", "discord_1.png"]},
+	{image: 'bean3.png', name: '00100100', title: 'DEVELOPER', iconImages: ["twitter.png"]}
+]
 
 const Home = () => {
-    const classes = useStyles()
+  const classes = useStyles();
+  
+  return (
+    <Box className={classes.root}>
+		<Box className={classes.banner} id="home">
+			<Box className={classes.hero}></Box>
+			<Box textAlign="center">
+				<Box className={classes.bannerContainer}>
+				<Container maxWidth="md">
+					<img className={classes.bannerLogo} src="/images/logo.png" alt="banner logo"/>
+					<Box mt={1}>
+						<Button
+							className={classes.mintButton}
+							color="primary"
+							variant="contained"
+						>
+							MINT
+						</Button>
+					</Box>
+					<Box mt={1}>
+						<Typography variant="h5">01:22:36</Typography>
+					</Box>
+					
+					{/* About Section */}
+					<Box mt={70} className={classes.id} id="about"></Box>
+					<Box mt={8} id="about">
+						<Typography variant="h1">ABOUT BEANVERSE</Typography>
+					</Box>
+					<Box className={classes.underLine} mt={1}></Box>
+					<Box mt={4}>
+						<Grid container spacing={3}>
+							<Grid item xs={12} md={4}>
+								<Box className={classes.articleBox} p={3}>
+									<Typography variant="h3">What is Beanverse?</Typography>
+									<Typography variant="h6" color="secondary">
+										• 8,888 Bean’s that escaped reality & 
+										broke into a new universe, the 
+										Beanverse. Scattered around this new 
+										Beanverse, the Beans try to find their 
+										way. With over (x) traits these Beans 
+										are fully built for your personality & 
+										habits!
+									</Typography>
+								</Box>
+							</Grid>
+							<Grid item xs={12} md={4}>
+								<Box className={classes.articleBox} p={3}>
+									<Typography variant="h3">Giving Back</Typography>
+									<Typography variant="h6" color="secondary">
+										• 50% of all royalties on the secondary market will be airdropped to Beanverse owners on a weekly basis! <br/>
+										• The other 50% will be used by the Beanverse team to buy back Beans on the secondary market, and those Beans will be burned forever!
+									</Typography>
+								</Box>
+							</Grid>
+							<Grid item xs={12} md={4}>
+								<Box className={classes.articleBox} p={3}>
+									<Typography variant="h3">Rarities</Typography>
+									<Typography variant="h6" color="secondary">
+										• All beans are 1/1! With over 160 traits and millions of possible combinations, no two Beans will be alike! 
+									</Typography>
+								</Box>
+							</Grid>
+						</Grid>
+					</Box>
+				</Container>
+				{/* Beans Section */}
+				<Box mt={2} className={classes.id} id="beans"></Box>
+				<Box mt={2} p={2}>
+					<Carousel
+						swipeable={false}
+						draggable={false}
+						showDots={true}
+						responsive={CAROUSEL_RESPONSIVE}
+						ssr={true} // means to render carousel on server-side.
+						infinite={true}
+						autoPlay={false}
+						autoPlaySpeed={1000}
+						arrows={false}
+						keyBoardControl={true}
+						transitionDuration={500}
+						containerClass="carousel-container"
+						removeArrowOnDeviceType={["tablet", "mobile"]}
+						itemClass="paddin-bottom: 40px"
+						renderButtonGroupOutside={true}
+					>
+						{CAROUSEL_ITEM_IMAGES.map((item) => {
+								return (
+									<Box className={classes.carouselItem}>
+										<Box className={classes.carouselImageBox}><img src={'/images/' + item} alt="BEAN" /></Box>
+									</Box>
+								)
+						})}
+					</Carousel>
+				</Box>
+			</Box>
+			</Box>
+		</Box>
+		{/* Roadmap Section */}
+      	<Roadmap />
+		{/* Team Section */}
+		<Box className={classes.teamSection} id="team" textAlign="center">
+			<Container maxWidth="md">
+				<Typography variant="h2" color="textSecondary">THE BEANVERSE TEAM</Typography>
+				<Box className={classes.underLine} mt={1}></Box>
+				<Box mt={4}>
+					<Grid container spacing={3}>
+						
+						{TEAMCARD_IMAGES.map((item, index) => {
+							return (
+								<Grid item xs={12} md={4}>
+									<TeamCard
+									image={item.image}
+									name={item.name}
+									title={item.title}
+									iconImgs={item.iconImages}
+									/>
+								</Grid>
+							)})
+						}
+					</Grid>
+				</Box>
+			</Container>
+		</Box>		
+		{/* Questions Section */}
+		<Questions />	
+    </Box>
+  );
+};
 
-    return (
-        <Box className={classes.root}>
-            <Box className={classes.banner}>
-                <img className={classes.hero} src="/images/hero.png" alt="Banner" />
-                <Box textAlign="center" padding={4}>
-                    <Container maxWidth="lg">
-                        <Box>
-                            <Typography variant="h1">
-                                Beanverse
-                                <br />
-                                Best Ever Collection in the world
-                            </Typography>
-                        </Box>
-                    </Container>
-                    <Container maxWidth="md">
-                        <Box mt={4}>
-                            <Typography variant="body1">
-                                There are many variations of passages of Lorem Ipsum available, but
-                                the majority have suffered alteration in some form, by injected
-                                humour, or randomised words which don't look even slightly
-                                believable. If you are going to use a passage of Lorem Ipsum.
-                            </Typography>
-                        </Box>
-                    </Container>
-                    <Box mt={6}>
-                        <Button color="primary" variant="contained">
-                            Explore Now
-                        </Button>
-                    </Box>
-                </Box>
-            </Box>
-            <Container maxWidth="lg">
-                <Box className={classes.section} id="about-us">
-                    <Grid container spacing={0}>
-                        <Grid item xs={12} md={6}>
-                            <Box textAlign="center">
-                                <img
-                                    className="responsive"
-                                    src="/images/announcer.png"
-                                    alt="Announcer"
-                                />
-                            </Box>
-                        </Grid>
-                        <Grid item xs={12} md={6}>
-                            <Box padding={2} display="flex" alignItems="center" height="100%">
-                                <Box>
-                                    <Typography variant="h2">About Us</Typography>
-                                    <Box marginTop={6}>
-                                        <Typography variant="caption">
-                                            There are many variations of passages of Lorem Ipsum
-                                            available, but the majority have suffered alteration in
-                                            some form, by injected humour, or randomised words which
-                                            don't look even slightly believable. If you are going to
-                                            use a passage of Lorem Ipsum, you need to be sure there
-                                            isn't anything embarrassing hidden in the middle of
-                                            text.
-                                        </Typography>
-                                    </Box>
-                                    <Box marginTop={6} display="flex">
-                                        <Button variant="contained" color="primary">
-                                            Explore Now
-                                        </Button>
-                                        <Box ml={2}></Box>
-                                        <Button variant="outlined" color="secondary">
-                                            Explore Now
-                                        </Button>
-                                    </Box>
-                                </Box>
-                            </Box>
-                        </Grid>
-                    </Grid>
-                </Box>
-
-                <Box className={classes.section} id="features" textAlign="center">
-                    <Typography variant="h2">Features</Typography>
-                    <Box marginTop={4}>
-                        <Grid container spacing={3}>
-                            <Grid item xs={12} md={4}>
-                                <Feature
-                                    image="/images/eye.png"
-                                    title="Game Experience"
-                                    description="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration."
-                                />
-                            </Grid>
-                            <Grid item xs={12} md={4}>
-                                <Feature
-                                    image="/images/nft.png"
-                                    title="Unique NFTs"
-                                    description="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration."
-                                />
-                            </Grid>
-                            <Grid item xs={12} md={4}>
-                                <Feature
-                                    image="/images/video.png"
-                                    title="Play to earn"
-                                    description="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration."
-                                />
-                            </Grid>
-                        </Grid>
-                    </Box>
-                </Box>
-
-                <Box className={classes.section} id="plush-bags" textAlign="center">
-                    <Typography variant="h2">Plush Bags</Typography>
-                    <Box marginTop={4}>
-                        <Grid container spacing={3}>
-                            <Grid item xs={12} md={4}>
-                                <Plush
-                                    image="/images/bag.png"
-                                    title="Plush Bgs"
-                                    description="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration."
-                                />
-                            </Grid>
-                            <Grid item xs={12} md={4}>
-                                <Plush
-                                    image="/images/bag.png"
-                                    title="Plush Bgs"
-                                    description="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration."
-                                />
-                            </Grid>
-                            <Grid item xs={12} md={4}>
-                                <Plush
-                                    image="/images/bag.png"
-                                    title="Plush Bgs"
-                                    description="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration."
-                                />
-                            </Grid>
-                        </Grid>
-                    </Box>
-                </Box>
-
-                <Box className={classes.section} id="plushies" textAlign="center">
-                    <Typography variant="h2">Plushies</Typography>
-                    <Box marginTop={4}>
-                        <Grid container spacing={3}>
-                            <Grid item xs={12} md={4}>
-                                <Plush
-                                    image="/images/plush.png"
-                                    title="Plush"
-                                    description="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration."
-                                />
-                            </Grid>
-                            <Grid item xs={12} md={4}>
-                                <Plush
-                                    image="/images/plush.png"
-                                    title="Plush"
-                                    description="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration."
-                                />
-                            </Grid>
-                            <Grid item xs={12} md={4}>
-                                <Plush
-                                    image="/images/plush.png"
-                                    title="Plush"
-                                    description="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration."
-                                />
-                            </Grid>
-                        </Grid>
-                    </Box>
-                </Box>
-
-                <Box className={classes.section} id="roadmap" textAlign="center">
-                    <Typography variant="h2">Roadmap</Typography>
-                    <Box marginTop={4}>
-                        <Roadmap />
-                    </Box>
-                </Box>
-
-                <Box className={classes.section} id="team" textAlign="center">
-                    <Typography variant="h2">Our Team</Typography>
-                    <Box marginTop={4} textAlign="left">
-                        <Grid container spacing={3}>
-                            <Grid item xs={12} md={3}>
-                                <TeamMember
-                                    image="/images/team/1.png"
-                                    name="Tom Latham"
-                                    title="CEO &amp; CO Founder"
-                                />
-                            </Grid>
-                            <Grid item xs={12} md={3}>
-                                <TeamMember
-                                    image="/images/team/2.png"
-                                    name="John Deo"
-                                    title="Founder"
-                                />
-                            </Grid>
-                            <Grid item xs={12} md={3}>
-                                <TeamMember
-                                    image="/images/team/3.png"
-                                    name="John Deo"
-                                    title="Strategy"
-                                />
-                            </Grid>
-                            <Grid item xs={12} md={3}>
-                                <TeamMember
-                                    image="/images/team/4.png"
-                                    name="Bob Milan"
-                                    title="Blockchain"
-                                />
-                            </Grid>
-                        </Grid>
-                    </Box>
-                </Box>
-            </Container>
-        </Box>
-    )
-}
-
-export default Home
+export default Home;

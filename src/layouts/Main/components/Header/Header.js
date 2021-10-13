@@ -3,16 +3,13 @@ import {
     AppBar,
     Box,
     Toolbar,
-    Button,
     Link,
     Grid,
     IconButton,
     Hidden
 } from '@material-ui/core'
-import {PlayArrow, SportsEsports, Twitter} from '@material-ui/icons'
+import {PlayArrow} from '@material-ui/icons'
 import useStyles from './Header.styles'
-
-import Logo from './Logo'
 
 const Header = () => {
     const isScrolling = useScrollTrigger({
@@ -20,7 +17,7 @@ const Header = () => {
         threshold: 64
     })
 
-    const isLightHeader = !isScrolling
+    const isLightHeader = false
 
     const classes = useStyles()
 
@@ -30,68 +27,58 @@ const Header = () => {
     }
 
     return (
-        <AppBar elevation={0} className={`${classes.appBar} ${isLightHeader ? ' light' : ''}`}>
-            <Toolbar className={withSmallStyles(classes.toolbar)}>
-                <Logo />
-
-                <Box flexGrow={1} />
-
-                <Box className={withSmallStyles(classes.navBar)}>
-                    <Hidden smDown>
+        <AppBar elevation={0} className={`${classes.appBar} ${isLightHeader ? ' light' : ''}`} position="sticky">
+            <Toolbar className={classes.toolbar}>
+                <Box className={classes.menuBar}>
+                    <Box className={classes.navBar}>
                         <Box>
-                            <Grid container spacing={4}>
-                                <Grid item>
-                                    <Link href="#about-us" variant="caption" color="textPrimary">
-                                        About Us
-                                    </Link>
-                                </Grid>
-                                <Grid item>
-                                    <Link href="#features" variant="caption" color="textPrimary">
-                                        Features
-                                    </Link>
-                                </Grid>
-                                <Grid item>
-                                    <Link href="#plush-bags" variant="caption" color="textPrimary">
-                                        Plush Bags
-                                    </Link>
-                                </Grid>
-                                <Grid item>
-                                    <Link href="#plushies" variant="caption" color="textPrimary">
-                                        Plushies
-                                    </Link>
-                                </Grid>
-                                <Grid item>
-                                    <Link href="#roadmap" variant="caption" color="textPrimary">
-                                        Roadmap
-                                    </Link>
-                                </Grid>
-                                <Grid item>
-                                    <Link href="#team" variant="caption" color="textPrimary">
-                                        Team
-                                    </Link>
-                                </Grid>
-                            </Grid>
+                            <Link href="#home" variant="caption" color="textPrimary">
+                                <Box paddingDown={2}>
+                                    <img src='/images/header_logo.png' alt="header logo"/>
+                                </Box>
+                            </Link>   
                         </Box>
-                    </Hidden>
-                    <Hidden smDown>
+                        {/* <Hidden smDown> */}
+                            <Box className={classes.headerLabels}>
+                                <Grid container spacing={5}>
+                                    <Grid item>
+                                        <Link href="#about" variant="caption" color="textPrimary">
+                                            ABOUT
+                                        </Link>
+                                    </Grid>
+                                    <Grid item>
+                                        <Link href="#beans" variant="caption" color="textPrimary">
+                                            BEANS
+                                        </Link>
+                                    </Grid>
+                                    <Grid item>
+                                        <Link href="#loadmap" variant="caption" color="textPrimary">
+                                            LOADMAP
+                                        </Link>
+                                    </Grid>
+                                    <Grid item>
+                                        <Link href="#team" variant="caption" color="textPrimary">
+                                            TEAM
+                                        </Link>
+                                    </Grid>
+                                </Grid>
+                            </Box>
+                        {/* </Hidden> */}
                         <Box marginLeft={8}>
-                            <Button variant="contained" color="primary">
-                                Play Now
-                            </Button>
+                            {/* <Hidden mdUp>
+                                <IconButton>
+                                    <PlayArrow />
+                                </IconButton>
+                            </Hidden> */}
+                            <Box className={classes.headerIcons}>
+                                <Link href="https://twitter.com/pfl_game" variant="caption" color="textPrimary">
+                                    <img src="/images/twitter.png" alt="twitter"/>   
+                                </Link>
+                                <Link href="https://discord.gg/pfl" variant="caption" color="textPrimary">
+                                    <img src="/images/discord.png" alt="discordr"/>   
+                                </Link>
+                            </Box>
                         </Box>
-                    </Hidden>
-                    <Box marginLeft={4}>
-                        <Hidden mdUp>
-                            <IconButton>
-                                <PlayArrow />
-                            </IconButton>
-                        </Hidden>
-                        <IconButton component={Link} href="https://discord.gg/pfl">
-                            <SportsEsports />
-                        </IconButton>
-                        <IconButton component={Link} href="https://twitter.com/pfl_game">
-                            <Twitter />
-                        </IconButton>
                     </Box>
                 </Box>
             </Toolbar>
