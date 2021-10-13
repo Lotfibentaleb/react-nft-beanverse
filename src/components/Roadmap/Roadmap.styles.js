@@ -5,34 +5,34 @@ const useStyles = makeStyles(theme => ({
         background: '#ffffff',
         paddingTop: theme.spacing(10)
     },
-    loadmapArea: { 
+    roadmapArea: { 
         width: '100%',
         minHeight: '430px',
-        backgroundImage: 'url(' + '/images/loadmap_line.png' + ')',
+        backgroundImage: 'url(' + '/images/roadmap_line.png' + ')',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
     },
-    loadmapRow1: {
+    roadmapRow1: {
         width: '100%',
         display: 'flex',
         justifyContent: 'space-between',
         paddingRight: '40px'
     },
-    loadmapRow2: {
+    roadmapRow2: {
         width: '100%',
         display: 'flex',
         justifyContent: 'space-between',
         paddingLeft: '70px',
         paddingRight: '170px'
     },
-    loadmapRow3: {
+    roadmapRow3: {
         width: '100%',
         display: 'flex',
         justifyContent: 'space-between',
         paddingLeft: '190px',
         paddingRight: '0px'
     },
-    loadmapItem: {
+    roadmapItem: {
         width: '255px',
         height: '129px',
         background: '#1F2B6C',
