@@ -71,7 +71,7 @@ const useStyles = makeStyles(theme => ({
         paddingTop: theme.spacing(15),
         paddingBottom: theme.spacing(20),
         width: '100%',
-        minHeight: '727px',
+        minHeight: '950px',
         background: '#ffffff',
         backgroundImage: 'url(' + '/images/team-back.png' + ')',
         backgroundRepeat: 'no-repeat',
