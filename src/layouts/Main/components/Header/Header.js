@@ -47,11 +47,6 @@ const Header = () => {
                                         </Link>
                                     </Grid>
                                     <Grid item>
-                                        <Link href="#beans" variant="caption" color="textPrimary">
-                                            BEANS
-                                        </Link>
-                                    </Grid>
-                                    <Grid item>
                                         <Link href="#roadmap" variant="caption" color="textPrimary">
                                             ROADMAP
                                         </Link>
@@ -59,6 +54,11 @@ const Header = () => {
                                     <Grid item>
                                         <Link href="#team" variant="caption" color="textPrimary">
                                             TEAM
+                                        </Link>
+                                    </Grid>
+                                    <Grid item>
+                                        <Link href="#faq" variant="caption" color="textPrimary">
+                                            FAQ
                                         </Link>
                                     </Grid>
                                 </Grid>

@@ -9,7 +9,7 @@ const Roadmap = () => {
         <Box className={classes.root}>
             <Container className={classes.roadmapWhiteArea} maxWidth="lg">
                 <Container maxWidth="md">
-                    <Fade bottom duration={3000}>
+                    <Fade bottom duration={1500}>
                         <Box textAlign="center">
                             <Typography variant="h2" color="textSecondary">BEANVERSE ROADMAP</Typography>
                             <Box className={classes.underLine} mt={1}></Box>

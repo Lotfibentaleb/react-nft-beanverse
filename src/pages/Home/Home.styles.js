@@ -55,11 +55,14 @@ const useStyles = makeStyles(theme => ({
     carouselArea:{
         width: '90%'
     },
+    carouselGroup: {
+        width: '100%'
+    },
     carouselItem: {
         width: '100%',
         display: 'flex',
-        justifyContent: 'center',
-        paddingBottom: theme.spacing(5)
+        justifyContent: 'space-around',
+        paddingBottom: theme.spacing(5),
     },
     carouselImageBox: {
         width: '292px',

@@ -11,15 +11,15 @@ const CAROUSEL_RESPONSIVE = {
     superLargeDesktop: {
         // the naming can be any, depends on you.
         breakpoint: {max: 4000, min: 3000},
-        items: 5
+        items: 1
     },
     desktop: {
         breakpoint: {max: 3000, min: 1024},
-        items: 5
+        items: 1
     },
     tablet: {
         breakpoint: {max: 1024, min: 464},
-        items: 3
+        items: 1
     },
     mobile: {
         breakpoint: {max: 464, min: 0},
@@ -28,21 +28,23 @@ const CAROUSEL_RESPONSIVE = {
 }
 
 const CAROUSEL_ITEM_IMAGES = [
-    'bean1.png',
+	['bean1.png',
     'bean2.png',
     'bean3.png',
     'bean4.png',
-    'bean5.png',
-    'bean6.png',
+    'bean5.png'],
+
+	['bean6.png',
     'bean7.png',
     'bean8.png',
     'bean9.png',
-    'bean10.png',
-    'bean11.png',
+    'bean10.png',],
+
+	['bean11.png',
     'bean12.png',
     'bean13.png',
     'bean14.png',
-    'bean15.png'
+    'bean15.png']
 ]
 
 const TEAMCARD_IMAGES = [
@@ -115,7 +117,7 @@ const Home = () => {
 
                             {/* About Section */}
                             <Box mt={110} className={classes.id} id="about"></Box>
-                            <Fade bottom duration={3000}>
+                            <Fade bottom duration={1500}>
                                 <Box mt={8}>
                                     <Typography variant="h1">ABOUT BEANVERSE</Typography>
 									<Box className={classes.underLine} mt={1}></Box>
@@ -166,7 +168,7 @@ const Home = () => {
 
                         {/* Beans Section */}
                         <Box mt={2} className={classes.id} id="beans"></Box>
-                        <Fade bottom duration={3000}>
+                        <Fade bottom duration={1500}>
                             <Box className={classes.beanSection} mt={8}>
                                 <Box className={classes.carouselArea}>
                                     <Carousel
@@ -185,19 +187,28 @@ const Home = () => {
                                         itemClass="paddin-bottom: 40px"
                                         renderButtonGroupOutside={true}
                                     >
-                                        {CAROUSEL_ITEM_IMAGES.map(item => {
-                                            return (
-                                                <Box className={classes.carouselItem}>
-                                                    <Box className={classes.carouselImageBox}>
-                                                        <img
-                                                            className={classes.carouselImage}
-                                                            src={'/images/' + item}
-                                                            alt="BEAN"
-                                                        />
-                                                    </Box>
-                                                </Box>
-                                            )
+                                        {CAROUSEL_ITEM_IMAGES.map((imageGroup) => {
+											return (
+												<Box className={classes.carouselGroup}>
+													<Box className={classes.carouselItem}>
+													{
+														imageGroup.map((item) => {
+															return (
+																<Box className={classes.carouselImageBox}>
+																	<img
+																		className={classes.carouselImage}
+																		src={'/images/' + item}
+																		alt="BEAN"
+																	/>
+																</Box>
+															)
+														})
+													}
+													</Box>
+												</Box>
+											)
                                         })}
+
                                     </Carousel>
                                 </Box>
                             </Box>
@@ -213,7 +224,7 @@ const Home = () => {
             {/* Team Section */}
             <Box className={classes.teamSection} id="team" textAlign="center">
                 <Box className={classes.miniManImages}></Box>
-				<Fade bottom duration={3000}>
+				<Fade bottom duration={1500}>
 					<Container maxWidth="lg">
 						<Typography variant="h2" color="textSecondary">
 							THE BEANVERSE TEAM

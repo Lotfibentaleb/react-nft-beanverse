@@ -28,8 +28,8 @@ const Questions = () => {
     const [expanded, setExpanded] = useState(-1)
 
     return (
-        <Box className={classes.askSection} textAlign="center">
-			<Fade bottom duration={3000}>
+        <Box className={classes.askSection} textAlign="center" id='faq'>
+			<Fade bottom duration={1500}>
 				<Container maxWidth="md">
 					<Typography variant="h2" color="textSecondary">FREQUENTLY ASKED QUESTIONS</Typography>
 					<Box className={classes.underLine} mt={1}></Box>
