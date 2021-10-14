@@ -1,4 +1,4 @@
-import {Box, Typography} from '@material-ui/core'
+import {Box, Typography, Link} from '@material-ui/core'
 import useStyles from './TeamCard.styles'
 
 const TeamCard = ({image, name, title, iconImgs, ...props}) => {
@@ -21,7 +21,9 @@ const TeamCard = ({image, name, title, iconImgs, ...props}) => {
                 {
                     iconImgs.map((item) => {
                         return (
-                            <img className={classes.iconImg} src={'/images/' + item} alt="team" />
+                            <Link href={item.link}>
+                                <img className={classes.iconImg} src={'/images/' + item.icon} alt="team" />
+                            </Link>
                     )})
                 }
             </Box>

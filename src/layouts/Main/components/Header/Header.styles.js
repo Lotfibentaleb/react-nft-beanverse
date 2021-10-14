@@ -42,11 +42,11 @@ const useStyles = makeStyles(theme => ({
     menuBar: {
         position: 'absolute',
         top: theme.spacing(2.5),
-        width: '665px',
-        height: '35px',
-        paddingLeft: '10px',
-        paddingRight: '10px',
-        backgroundImage: "url(" + "/images/top-bar.png" + ")",
+        width: '805px',
+        height: '47px',
+        paddingLeft: '18px',
+        paddingRight: '18px',
+        backgroundImage: "url(" + "/images/top_bar_front.png" + ")",
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
@@ -73,12 +73,23 @@ const useStyles = makeStyles(theme => ({
     },
     headerLabels: {
         paddingLeft: theme.spacing(5),
-        paddingBottom: theme.spacing(1)
+        paddingBottom: theme.spacing(0.5)
     },
-    headerIcons: {
+    tobbarLogoBox: {
+        marginTop: '5px'
+    },
+    topbarLogo: {
+        width: '110px'
+    },
+    topbarIconGroup: {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center'
+    },
+    topbarIcon: {
+        width: '32px',
+        height: '24px',
+        marginLeft: '7px'
     },
     topMenu: {},
     profile: {

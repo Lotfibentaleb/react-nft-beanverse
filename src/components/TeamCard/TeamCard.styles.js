@@ -5,6 +5,7 @@ const useStyles = makeStyles(theme => ({
         background: '#1F2B6C',
         borderRadius: '10px',
         padding: theme.spacing(2),
+        zIndex: -1
     },
     textContainer: {
         paddingLeft: theme.spacing(2),
@@ -24,7 +25,7 @@ const useStyles = makeStyles(theme => ({
         marginLeft: theme.spacing(1),
         marginRight: theme.spacing(1),
         width: '32px',
-        height: '32px'
+        height: '32px',
     }
 }))
 

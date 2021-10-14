@@ -32,15 +32,15 @@ const Header = () => {
                 <Box className={classes.menuBar}>
                     <Box className={classes.navBar}>
                         <Box>
-                            <Link href="#home" variant="caption" color="textPrimary">
-                                <Box paddingDown={2}>
-                                    <img src='/images/header_logo.png' alt="header logo"/>
+                            <Link href="#" variant="caption" color="textPrimary">
+                                <Box className={classes.tobbarLogoBox}>
+                                    <img className={classes.topbarLogo} src='/images/topbar_beanverse_logo.png' alt="header logo"/>
                                 </Box>
                             </Link>   
                         </Box>
                         {/* <Hidden smDown> */}
                             <Box className={classes.headerLabels}>
-                                <Grid container spacing={5}>
+                                <Grid container spacing={7}>
                                     <Grid item>
                                         <Link href="#about" variant="caption" color="textPrimary">
                                             ABOUT
@@ -70,12 +70,12 @@ const Header = () => {
                                     <PlayArrow />
                                 </IconButton>
                             </Hidden> */}
-                            <Box className={classes.headerIcons}>
-                                <Link href="https://twitter.com/pfl_game" variant="caption" color="textPrimary">
-                                    <img src="/images/twitter.png" alt="twitter"/>   
+                            <Box className={classes.topbarIconGroup}>
+                                <Link href="#" variant="caption" color="textPrimary">
+                                    <img className={classes.topbarIcon} src="/images/twitter.png" alt="twitter"/>   
                                 </Link>
-                                <Link href="https://discord.gg/pfl" variant="caption" color="textPrimary">
-                                    <img src="/images/discord.png" alt="discordr"/>   
+                                <Link href="#" variant="caption" color="textPrimary">
+                                    <img className={classes.topbarIcon} src="/images/discord.png" alt="discordr"/>   
                                 </Link>
                             </Box>
                         </Box>

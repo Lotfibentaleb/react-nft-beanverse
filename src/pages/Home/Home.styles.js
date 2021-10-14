@@ -8,15 +8,17 @@ const useStyles = makeStyles(theme => ({
     banner: {
         position: 'relative',
         width: '100%',
-        minHeight: '100vh',
     },
     hero: {
         width: '100%',
-        minHeight: '1754px',
-        backgroundImage: 'url(' + '/images/top-illusion1.png' + ')',
+        minHeight: '2209px',
+        backgroundImage: 'url(' + '/images/top_Illustration.png' + ')',
         backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
+        backgroundPosition: 'top',
+        backgroundSize: 'contain',
+        background: '#16295B',
+        boxShadow: '0px 4px 50px #16295B',
+        zIndex: '1',
         [theme.breakpoints.up('md')]: {
         }
     },
@@ -27,7 +29,9 @@ const useStyles = makeStyles(theme => ({
         width: '100%',
     },
     bannerLogo: {
-        marginTop: theme.spacing(28),
+        width: '488px',
+        height: '108px',
+        marginTop: theme.spacing(30),
     },
     underLine: {
         width: '437px',
@@ -39,10 +43,17 @@ const useStyles = makeStyles(theme => ({
     },
     articleBox: {
         width: '100%',
-        height: '219px',
         background: 'rgba(255, 255, 255, 0.15)',
         borderRadius: '24px',
         textAlign: 'left'
+    },
+    beanSection: {
+        width: '100%',
+        display: 'flex',
+        justifyContent: 'center'
+    },
+    carouselArea:{
+        width: '90%'
     },
     carouselItem: {
         width: '100%',
@@ -51,14 +62,18 @@ const useStyles = makeStyles(theme => ({
         paddingBottom: theme.spacing(5)
     },
     carouselImageBox: {
-        width: '238px',
-        height: '238px',
+        width: '292px',
+        height: '292px',
         border: '8px solid #159EEC',
         borderRadius: '10px',
     },
+    carouselImage: {
+        width: '100%',
+        height: '100%'
+    },
     mintButton: {
-        width: '131px',
-        height: '38px',
+        width: '163px',
+        height: '47px',
         boxShadow: '0px 0px 4px 3px rgba(0, 0, 0, 0.15)',
         borderRadius: '10px',
         fontWeight: 'bold',
@@ -71,19 +86,19 @@ const useStyles = makeStyles(theme => ({
         paddingTop: theme.spacing(15),
         paddingBottom: theme.spacing(20),
         width: '100%',
-        minHeight: '950px',
+        minHeight: '760px',
         background: '#ffffff',
         backgroundImage: 'url(' + '/images/team-back.png' + ')',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
-        backgroundSize: 'cover'
+        backgroundSize: 'cover',
     },
     paper: {
         paddingTop: theme.spacing(4)
     },
     id: {
         width: '100%',
-        height: '10px'
+        height: '1px'
     }
 }))
 

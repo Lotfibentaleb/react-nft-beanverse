@@ -9,11 +9,12 @@ const useStyles = makeStyles(theme => ({
         background: '#ffffff',
         backgroundImage: 'url(' + '/images/faq-back.png' + ')',
         backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
+        backgroundPosition: 'top',
         backgroundSize: 'cover'
     },
     accodian: {
         width: '100%',
+        height: '46px',
         background: '#E1EFF4',
         borderRadius: '15px',
         display: 'flex',
@@ -22,7 +23,10 @@ const useStyles = makeStyles(theme => ({
         paddingRight: '14px',
         alignItems: 'center',
         color: '#1F2B6C',
-        boxShadow: '0px 0px 4px 3px rgba(0, 0, 0, 0.1)'
+        boxShadow: '0px 0px 4px 3px rgba(0, 0, 0, 0.1)',
+        '&:hover': {
+            cursor: 'pointer',
+        }
     },
     titleGroup: {
         color: '#1F2B6C',

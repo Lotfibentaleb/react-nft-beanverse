@@ -9,12 +9,12 @@ const Footer = () => {
             <Box className={classes.footer}>
                 <img src="/images/footer_logo.png" alt="Beanverse" />
                 <Box className={classes.socialLinkGroup}>
-                    <Link href="https://discord.gg/pfl" variant="caption" color="textPrimary" underline="always">
+                    <Link href="#" variant="caption" color="textPrimary" underline="always">
                         <Box className={classes.socialLink}>
                             <Typography >DISCORD</Typography>
                         </Box>
                     </Link>
-                    <Link href="https://twitter.com/pfl_game" variant="caption" color="textPrimary" underline="always">
+                    <Link href="#" variant="caption" color="textPrimary" underline="always">
                         <Box className={classes.socialLink}>
                             <Typography >TWITTER</Typography>
                         </Box>

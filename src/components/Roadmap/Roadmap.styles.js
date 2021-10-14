@@ -3,7 +3,17 @@ import {makeStyles} from '@material-ui/core/styles'
 const useStyles = makeStyles(theme => ({
     root: {
         background: '#ffffff',
-        paddingTop: theme.spacing(10)
+        backgroundImage: 'url(' + '/images/roadmap_background_left.png' + ')',
+        backgroundRepeat: 'repeat',
+        backgroundPosition: 'left',
+        backgroundSize: 'contain',
+        height: '728px'
+    },
+    roadmapWhiteArea: {
+        paddingTop: theme.spacing(10),
+        background: '#ffffff',
+        boxShadow: '0px 4px 150px rgba(136, 154, 169, 0.42)',
+        height: '100%'
     },
     loadmapArea: { 
         width: '100%',
@@ -33,13 +43,13 @@ const useStyles = makeStyles(theme => ({
         paddingRight: '0px'
     },
     loadmapItem: {
-        width: '255px',
-        height: '129px',
+        width: '271px',
+        height: '137px',
         background: '#1F2B6C',
         borderRadius: '24px',
         marginTop: '30px',
         textAlign: 'left',
-        paddingTop: '15px',
+        paddingTop: '20px',
         paddingLeft: '25px',
         paddingRight: '15px',
     },

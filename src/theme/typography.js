@@ -28,7 +28,7 @@ const typegraphy = {
     },
     caption: {
         fontFamily: "Gotham Rounded",
-        fontSize: 18,
+        fontSize: 19,
         fontWeight: 'medium'
     },
     subtitle2: {
