@@ -42,7 +42,7 @@ const useStyles = makeStyles(theme => ({
         paddingLeft: '190px',
         paddingRight: '0px'
     },
-    loadmapItem: {
+    roadmapItem: {
         width: '271px',
         height: '137px',
         background: '#1F2B6C',
