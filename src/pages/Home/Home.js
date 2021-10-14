@@ -118,8 +118,8 @@ const Home = () => {
                             <Fade bottom duration={3000}>
                                 <Box mt={8}>
                                     <Typography variant="h1">ABOUT BEANVERSE</Typography>
+									<Box className={classes.underLine} mt={1}></Box>
                                 </Box>
-                                <Box className={classes.underLine} mt={1}></Box>
                                 <Box mt={4}>
                                     <Grid container spacing={3}>
                                         <Grid item xs={12} md={4}>
@@ -212,30 +212,31 @@ const Home = () => {
 
             {/* Team Section */}
             <Box className={classes.teamSection} id="team" textAlign="center">
-                <Fade bottom duration={3000}>
-                    <Container maxWidth="lg">
-                        <Typography variant="h2" color="textSecondary">
-                            THE BEANVERSE TEAM
-                        </Typography>
-                        <Box className={classes.underLine} mt={1}></Box>
-                        <Box mt={4}>
-                            <Grid container spacing={3}>
-                                {TEAMCARD_IMAGES.map((item, index) => {
-                                    return (
-                                        <Grid item xs={12} md={3}>
-                                            <TeamCard
-                                                image={item.image}
-                                                name={item.name}
-                                                title={item.title}
-                                                iconImgs={item.iconImages}
-                                            />
-                                        </Grid>
-                                    )
-                                })}
-                            </Grid>
-                        </Box>
-                    </Container>
-                </Fade>
+                <Box className={classes.miniManImages}></Box>
+				<Fade bottom duration={3000}>
+					<Container maxWidth="lg">
+						<Typography variant="h2" color="textSecondary">
+							THE BEANVERSE TEAM
+						</Typography>
+						<Box className={classes.underLine} mt={1}></Box>
+						<Box mt={4}>
+							<Grid container spacing={3}>
+								{TEAMCARD_IMAGES.map((item, index) => {
+									return (
+										<Grid item xs={12} md={3}>
+											<TeamCard
+												image={item.image}
+												name={item.name}
+												title={item.title}
+												iconImgs={item.iconImages}
+											/>
+										</Grid>
+									)
+								})}
+							</Grid>
+						</Box>
+					</Container>
+				</Fade>
             </Box>
 
             {/* Questions Section */}

@@ -7,7 +7,7 @@ const useStyles = makeStyles(theme => ({
         backgroundRepeat: 'repeat',
         backgroundPosition: 'left',
         backgroundSize: 'contain',
-        height: '728px'
+        height: '738px'
     },
     roadmapWhiteArea: {
         paddingTop: theme.spacing(10),
