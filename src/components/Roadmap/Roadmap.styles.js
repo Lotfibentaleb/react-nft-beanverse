@@ -15,27 +15,27 @@ const useStyles = makeStyles(theme => ({
         boxShadow: '0px 4px 150px rgba(136, 154, 169, 0.42)',
         height: '100%'
     },
-    loadmapArea: { 
+    roadmapArea: { 
         width: '100%',
         minHeight: '430px',
-        backgroundImage: 'url(' + '/images/loadmap_line.png' + ')',
+        backgroundImage: 'url(' + '/images/roadmap_line.png' + ')',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
     },
-    loadmapRow1: {
+    roadmapRow1: {
         width: '100%',
         display: 'flex',
         justifyContent: 'space-between',
         paddingRight: '40px'
     },
-    loadmapRow2: {
+    roadmapRow2: {
         width: '100%',
         display: 'flex',
         justifyContent: 'space-between',
         paddingLeft: '70px',
         paddingRight: '170px'
     },
-    loadmapRow3: {
+    roadmapRow3: {
         width: '100%',
         display: 'flex',
         justifyContent: 'space-between',

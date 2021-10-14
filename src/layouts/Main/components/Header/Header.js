@@ -52,8 +52,8 @@ const Header = () => {
                                         </Link>
                                     </Grid>
                                     <Grid item>
-                                        <Link href="#loadmap" variant="caption" color="textPrimary">
-                                            LOADMAP
+                                        <Link href="#roadmap" variant="caption" color="textPrimary">
+                                            ROADMAP
                                         </Link>
                                     </Grid>
                                     <Grid item>
