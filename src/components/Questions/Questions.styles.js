@@ -64,6 +64,9 @@ const useStyles = makeStyles(theme => ({
     },
     underLine: {
         width: '437px',
+        [theme.breakpoints.down('xs')]: {
+            width: '340px',
+        },
         height: '5px',
         background: '#159EEC',
         borderRadius: '5px',

@@ -12,15 +12,20 @@ const useStyles = makeStyles(theme => ({
     hero: {
         width: '100%',
         minHeight: '2209px',
+        [theme.breakpoints.down('sm')]: {
+            height: 'auto'
+        },
         backgroundImage: 'url(' + '/images/top_Illustration.png' + ')',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'top',
         backgroundSize: 'contain',
+        [theme.breakpoints.down('sm')]: {
+            backgroundSize: '160%'
+        },
         background: '#16295B',
         boxShadow: '0px 4px 50px #16295B',
         zIndex: '1',
-        [theme.breakpoints.up('md')]: {
-        }
+       
     },
     bannerContainer: {
         position: 'absolute',
@@ -31,10 +36,29 @@ const useStyles = makeStyles(theme => ({
     bannerLogo: {
         width: '488px',
         height: '108px',
+        [theme.breakpoints.down('xs')]: {
+            width: '350px',
+            height: '85px',
+        },
         marginTop: theme.spacing(30),
+    },
+    aboutIdPosition: {
+        marginTop: '880px',
+        [theme.breakpoints.down('md')]: {
+            marginTop: '600px',
+        },
+        [theme.breakpoints.down('sm')]: {
+            marginTop: '500px',
+        },
+        [theme.breakpoints.down('xs')]: {
+            marginTop: '250px',
+        }
     },
     underLine: {
         width: '437px',
+        [theme.breakpoints.down('xs')]: {
+            width: '340px',
+        },
         height: '5px',
         background: '#159EEC',
         borderRadius: '5px',

@@ -26,23 +26,17 @@ const useStyles = makeStyles(theme => ({
         [theme.breakpoints.up('md')]: {
             height: theme.spacing(3)
         },
-        // [theme.breakpoints.up('lg')]: {
-        //     paddingLeft: theme.spacing(8),
-        //     paddingRight: theme.spacing(8)
-        // },
-        // '&.small': {
-        //     [theme.breakpoints.down('sm')]: {
-        //         height: theme.spacing(7)
-        //     },
-        //     [theme.breakpoints.up('md')]: {
-        //         height: theme.spacing(10)
-        //     }
-        // }
     },
     menuBar: {
         position: 'absolute',
         top: theme.spacing(2.5),
         width: '805px',
+        [theme.breakpoints.down('sm')]: {
+            width: '580px'
+        },
+        [theme.breakpoints.down('xs')]: {
+            width: '370px'
+        },
         height: '47px',
         paddingLeft: '18px',
         paddingRight: '18px',
@@ -62,9 +56,9 @@ const useStyles = makeStyles(theme => ({
         display: 'flex',
         alignItems: 'center',
         transition: 'all 0.5s',
-        // [theme.breakpoints.up('md')]: {
-        //     marginTop: theme.spacing(-5)
-        // },
+        [theme.breakpoints.down('sm')]: {
+            justifyContent: 'space-between'
+        },
         '&.small': {
             [theme.breakpoints.up('md')]: {
                 marginTop: 0
@@ -79,7 +73,7 @@ const useStyles = makeStyles(theme => ({
         marginTop: '5px'
     },
     topbarLogo: {
-        width: '110px'
+        width: '110px',
     },
     topbarIconGroup: {
         display: 'flex',

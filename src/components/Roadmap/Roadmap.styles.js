@@ -7,7 +7,10 @@ const useStyles = makeStyles(theme => ({
         backgroundRepeat: 'repeat',
         backgroundPosition: 'left',
         backgroundSize: 'contain',
-        height: '738px'
+        height: '738px',
+        [theme.breakpoints.down('sm')]: {
+            height: 'auto',
+        }
     },
     roadmapWhiteArea: {
         paddingTop: theme.spacing(10),
@@ -21,6 +24,9 @@ const useStyles = makeStyles(theme => ({
         backgroundImage: 'url(' + '/images/roadmap_line.png' + ')',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
+        [theme.breakpoints.down('sm')]: {
+            backgroundImage: 'none'
+        }
     },
     roadmapRow1: {
         width: '100%',
@@ -52,6 +58,9 @@ const useStyles = makeStyles(theme => ({
         paddingTop: '20px',
         paddingLeft: '25px',
         paddingRight: '15px',
+        [theme.breakpoints.down('sm')]: {
+            width: '100%',
+        }
     },
     roadmapText: {
         fontFamily: 'Gotham Rounded',
@@ -64,6 +73,9 @@ const useStyles = makeStyles(theme => ({
     underLine: {
         width: '437px',
         height: '5px',
+        [theme.breakpoints.down('xs')]: {
+            width: '340px',
+        },
         background: '#159EEC',
         borderRadius: '5px',
         marginLeft: 'auto',

@@ -40,28 +40,30 @@ const Header = () => {
                         </Box>
                         {/* <Hidden smDown> */}
                             <Box className={classes.headerLabels}>
-                                <Grid container spacing={7}>
-                                    <Grid item>
-                                        <Link href="#about" variant="caption" color="textPrimary">
-                                            ABOUT
-                                        </Link>
+                                <Hidden smDown>
+                                    <Grid container spacing={7}>
+                                        <Grid item>
+                                            <Link href="#about" variant="caption" color="textPrimary">
+                                                ABOUT
+                                            </Link>
+                                        </Grid>
+                                        <Grid item>
+                                            <Link href="#roadmap" variant="caption" color="textPrimary">
+                                                ROADMAP
+                                            </Link>
+                                        </Grid>
+                                        <Grid item>
+                                            <Link href="#team" variant="caption" color="textPrimary">
+                                                TEAM
+                                            </Link>
+                                        </Grid>
+                                        <Grid item>
+                                            <Link href="#faq" variant="caption" color="textPrimary">
+                                                FAQ
+                                            </Link>
+                                        </Grid>
                                     </Grid>
-                                    <Grid item>
-                                        <Link href="#roadmap" variant="caption" color="textPrimary">
-                                            ROADMAP
-                                        </Link>
-                                    </Grid>
-                                    <Grid item>
-                                        <Link href="#team" variant="caption" color="textPrimary">
-                                            TEAM
-                                        </Link>
-                                    </Grid>
-                                    <Grid item>
-                                        <Link href="#faq" variant="caption" color="textPrimary">
-                                            FAQ
-                                        </Link>
-                                    </Grid>
-                                </Grid>
+                                </Hidden>
                             </Box>
                         {/* </Hidden> */}
                         <Box marginLeft={8}>

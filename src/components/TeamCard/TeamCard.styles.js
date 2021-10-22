@@ -5,7 +5,10 @@ const useStyles = makeStyles(theme => ({
         background: '#1F2B6C',
         borderRadius: '10px',
         padding: theme.spacing(2),
-        zIndex: -1
+        zIndex: -1,
+        [theme.breakpoints.down('sm')]: {
+            width: '300px'
+        },
     },
     textContainer: {
         paddingLeft: theme.spacing(2),

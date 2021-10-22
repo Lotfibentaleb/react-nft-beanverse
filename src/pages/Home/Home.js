@@ -116,7 +116,7 @@ const Home = () => {
                             </Box>
 
                             {/* About Section */}
-                            <Box mt={110} className={classes.id} id="about"></Box>
+                            <Box className={classes.aboutIdPosition} id="about"></Box>
                             <Fade bottom duration={1500}>
                                 <Box mt={8}>
                                     <Typography variant="h1">ABOUT BEANVERSE</Typography>
@@ -234,7 +234,7 @@ const Home = () => {
 							<Grid container spacing={3}>
 								{TEAMCARD_IMAGES.map((item, index) => {
 									return (
-										<Grid item xs={12} md={3}>
+										<Grid item xs={12} md={3}  style={{ display: "flex", justifyContent: "center" }}>
 											<TeamCard
 												image={item.image}
 												name={item.name}
