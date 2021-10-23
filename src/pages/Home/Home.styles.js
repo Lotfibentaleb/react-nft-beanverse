@@ -12,8 +12,14 @@ const useStyles = makeStyles(theme => ({
     hero: {
         width: '100%',
         minHeight: '2209px',
+        [theme.breakpoints.down('md')]: {
+            minHeight: '2000px',
+        },
         [theme.breakpoints.down('sm')]: {
-            height: 'auto'
+            minHeight: '1750px',
+        },
+        [theme.breakpoints.down('xs')]: {
+            minHeight: '1800px',
         },
         backgroundImage: 'url(' + '/images/top_Illustration.png' + ')',
         backgroundRepeat: 'no-repeat',
